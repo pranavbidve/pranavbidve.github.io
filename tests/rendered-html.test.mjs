@@ -34,11 +34,14 @@ test("server-renders the complete portfolio", async () => {
   assert.match(html, /Shopify Competitive Intelligence/);
   assert.match(html, /Agentic Commerce Assistant/);
   assert.match(html, /HexaNote/);
+  assert.match(html, /Private repository/);
+  assert.match(html, /A privacy first note taking system[\s\S]*real time device synchronization/);
   assert.match(html, /SLiM-Eval/);
   assert.match(html, /Overlapping Prakriti Detection/);
   assert.match(html, /Pranav-Bidve-Resume\.pdf/);
   assert.match(html, /Kordis[\s\S]*ML Intern/);
   assert.doesNotMatch(html, /Pranav Milind Bidve/);
+  assert.doesNotMatch(html, />PB<span class="accent">\.<\/span>/);
   assert.match(html, /<h1>Pranav <span>Bidve<\/span><\/h1>/);
   assert.match(html, /AI\/ML Engineer/);
   assert.doesNotMatch(html, /Inference stream|signal-visual|signal-bars/);

@@ -53,7 +53,7 @@ const projects = [
     index: "03",
     title: "HexaNote",
     description:
-      "A privacy-first note-taking system with local LLM inference, semantic search, RAG chat, and real-time device synchronization—built to keep every note on the user's machine.",
+      "A privacy first note taking system with local LLM inference, semantic search, RAG chat, and real time device synchronization—built to keep every note on the user's machine.",
     tags: ["Local AI", "RAG", "Ollama", "Weaviate", "FastAPI"],
     href: "https://github.com/pranavbidve/HexaNote",
   },
@@ -94,9 +94,6 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Pranav Bidve, home">
-          PB<span className="accent">.</span>
-        </a>
         <nav aria-label="Primary navigation">
           {navItems.map(([label, id]) => (
             <a key={id} href={`#${id}`}>
@@ -166,7 +163,7 @@ export default function Home() {
               <div className="card-top">
                 <span>{project.index}</span>
                 <a href={project.href} target="_blank" rel="noreferrer" aria-label={`View ${project.title} repository`}>
-                  Repository ↗
+                  Private repository ↗
                 </a>
               </div>
               <h3>{project.title}</h3>
