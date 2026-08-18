@@ -60,10 +60,8 @@ nav a:hover, .contact-link:hover { color: var(--ink); }
   text-transform: uppercase;
 }
 .hero-stage {
-  display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(300px, .65fr);
+  display: flex;
   align-items: center;
-  gap: clamp(30px, 5vw, 90px);
   margin: auto 0 72px;
 }
 .hero-identity { min-width: 0; }
@@ -77,7 +75,7 @@ h1 {
 }
 h1 span { color: #fff; }
 .hero-role {
-  margin: 24px 0 0;
+  margin: 24px 0 0 10px;
   color: var(--accent);
   font: 12px/1 var(--font-geist-mono);
   letter-spacing: .16em;
@@ -94,74 +92,6 @@ h1 span { color: #fff; }
 .intro { margin: 0; color: #b7bbc2; font-size: clamp(16px, 1.45vw, 21px); line-height: 1.55; }
 .scroll-cue { justify-self: end; color: var(--muted); font: 12px/1 var(--font-geist-mono); text-transform: uppercase; letter-spacing: .12em; }
 .scroll-cue span { color: var(--accent); margin-left: 10px; }
-.signal-visual {
-  min-width: 0;
-  padding: 18px;
-  border: 1px solid var(--line);
-  background: rgba(11, 13, 16, .82);
-  box-shadow: 0 24px 90px rgba(0, 0, 0, .3);
-}
-.signal-head, .signal-foot {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #6f747d;
-  font: 9px/1 var(--font-geist-mono);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-.signal-live { display: flex; align-items: center; gap: 7px; color: var(--accent); }
-.signal-live i { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); animation: statusBlink 1.8s ease-in-out infinite; }
-.signal-field {
-  position: relative;
-  height: 250px;
-  margin: 18px 0;
-  overflow: hidden;
-  border-block: 1px solid #1c1f25;
-  background:
-    radial-gradient(circle at center, rgba(182,255,74,.08), transparent 58%),
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px);
-  background-size: auto, 100% 42px;
-}
-.signal-beam {
-  position: absolute;
-  z-index: 1;
-  inset: 0 auto 0 -34%;
-  width: 34%;
-  background: linear-gradient(90deg, transparent, rgba(182,255,74,.11), transparent);
-  animation: beamSweep 4.8s ease-in-out infinite;
-}
-.signal-bars {
-  position: absolute;
-  inset: 38px 22px 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(7px, 1vw, 12px);
-}
-.signal-bars i {
-  width: 3px;
-  height: calc(18% + (var(--bar) % 6) * 10%);
-  max-height: 92%;
-  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
-  opacity: .2;
-  animation: signalPulse 2.4s ease-in-out infinite;
-  animation-delay: calc(var(--bar) * -0.13s);
-  box-shadow: 0 0 14px rgba(182,255,74,.16);
-}
-.signal-word {
-  position: absolute;
-  z-index: 2;
-  color: #7d838c;
-  font: 8px var(--font-geist-mono);
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  animation: wordCycle 6s ease-in-out infinite;
-}
-.signal-word-a { top: 24px; left: 24px; }
-.signal-word-b { top: 50%; right: 20px; animation-delay: -2s; }
-.signal-word-c { bottom: 22px; left: 34%; animation-delay: -4s; }
-
 .section {
   width: min(1440px, calc(100% - 48px));
   margin: 0 auto;
@@ -186,10 +116,10 @@ h1 span { color: #fff; }
 .experience-meta p { margin: 5px 0 0; }
 .node { position: absolute; width: 9px; height: 9px; right: -45px; top: 6px; border-radius: 50%; background: var(--background); border: 2px solid var(--accent); }
 .experience-body { padding-left: 52px; }
-.experience-title { display: grid; grid-template-columns: minmax(210px, .7fr) 1fr; gap: 40px; margin-bottom: 30px; }
+.experience-title { margin-bottom: 30px; }
 .experience-title h3, .project-card h3, .publication h3, .capability h3, .education-list h3 { margin: 0; font-size: 28px; font-weight: 540; letter-spacing: -.03em; }
 .experience-title > div > p { color: var(--accent); font: 12px var(--font-geist-mono); text-transform: uppercase; letter-spacing: .08em; }
-.experience-summary { margin: 0; color: #b6bac2; font-size: 17px; line-height: 1.6; }
+.experience-title > div > .experience-summary { max-width: 760px; margin: 18px 0 0; color: #b6bac2; font: 17px/1.6 var(--font-geist-sans); letter-spacing: 0; text-transform: none; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tags span { border: 1px solid var(--line); border-radius: 999px; padding: 7px 10px; color: #a4a9b2; font: 10px var(--font-geist-mono); text-transform: uppercase; letter-spacing: .06em; }
 
@@ -249,13 +179,7 @@ h1 span { color: #fff; }
 .contact-bottom a:hover { color: var(--accent); }
 footer { width: min(1440px, calc(100% - 48px)); margin: 0 auto; padding: 24px 0 36px; display: flex; justify-content: space-between; color: #585d66; font: 10px var(--font-geist-mono); text-transform: uppercase; border-top: 1px solid var(--line); }
 
-@keyframes beamSweep { 0% { transform: translateX(0); opacity: 0; } 20%,80% { opacity: 1; } 100% { transform: translateX(395%); opacity: 0; } }
-@keyframes signalPulse { 0%,100% { transform: scaleY(.35); opacity: .16; } 50% { transform: scaleY(1); opacity: .9; } }
-@keyframes wordCycle { 0%,100% { opacity: .18; } 35%,60% { opacity: .9; color: var(--accent); } }
-@keyframes statusBlink { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
-
 @media (max-width: 900px) {
-  .hero-stage { grid-template-columns: minmax(0, 1fr) 260px; gap: 24px; }
   h1 { font-size: clamp(56px, 8.5vw, 80px); }
   .section-heading, .subheading { grid-template-columns: 1fr; }
   .project-grid { grid-template-columns: 1fr; }
@@ -273,9 +197,8 @@ footer { width: min(1440px, calc(100% - 48px)); margin: 0 auto; padding: 24px 0 
   .site-header { grid-template-columns: 1fr 1fr; }
   nav { display: none; }
   .hero { min-height: 760px; }
-  .hero-stage { grid-template-columns: 1fr; margin: 52px 0 46px; }
+  .hero-stage { margin: 52px 0 46px; }
   h1 { font-size: clamp(40px, 11vw, 64px); }
-  .signal-visual { width: min(100%, 380px); justify-self: end; }
   .hero-bottom { grid-template-columns: 1fr; }
   .scroll-cue { justify-self: start; }
   .section { padding: 96px 0; }
@@ -290,6 +213,5 @@ footer { width: min(1440px, calc(100% - 48px)); margin: 0 auto; padding: 24px 0 
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .signal-beam, .signal-bars i, .signal-word, .signal-live i { animation: none; }
   .project-card { transition: none; }
 }

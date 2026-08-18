@@ -41,6 +41,8 @@ test("server-renders the complete portfolio", async () => {
   assert.doesNotMatch(html, /Pranav Milind Bidve/);
   assert.match(html, /<h1>Pranav <span>Bidve<\/span><\/h1>/);
   assert.match(html, /AI\/ML Engineer/);
+  assert.doesNotMatch(html, /Inference stream|signal-visual|signal-bars/);
+  assert.match(html, /Founding AI Engineer<\/p><p class="experience-summary">Building an agent-powered/);
   assert.doesNotMatch(html, /Vellore Institute of Technology/);
   assert.doesNotMatch(html, /<object[^>]+Pranav-Bidve-Resume\.pdf/);
   assert.match(html, /download=""[^>]*>Download résumé/);

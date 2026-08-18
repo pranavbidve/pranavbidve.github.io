@@ -115,27 +115,6 @@ export default function Home() {
             <h1>Pranav <span>Bidve</span></h1>
             <p className="hero-role">AI/ML Engineer</p>
           </div>
-          <div className="signal-visual" aria-hidden="true">
-            <div className="signal-head">
-              <span>Inference stream</span>
-              <span className="signal-live"><i /> Live</span>
-            </div>
-            <div className="signal-field">
-              <span className="signal-beam" />
-              <span className="signal-word signal-word-a">RETRIEVE</span>
-              <span className="signal-word signal-word-b">REASON</span>
-              <span className="signal-word signal-word-c">EVALUATE</span>
-              <div className="signal-bars">
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((bar) => (
-                  <i key={bar} style={{ "--bar": bar } as React.CSSProperties} />
-                ))}
-              </div>
-            </div>
-            <div className="signal-foot">
-              <span>Context grounded</span>
-              <span>Trace 0184</span>
-            </div>
-          </div>
         </div>
         <div className="hero-bottom">
           <p className="intro">
@@ -166,8 +145,8 @@ export default function Home() {
                   <div>
                     <h3>{item.company}</h3>
                     <p>{item.role}</p>
+                    <p className="experience-summary">{item.summary}</p>
                   </div>
-                  <p className="experience-summary">{item.summary}</p>
                 </div>
                 <div className="tags">
                   {item.stack.map((tool) => <span key={tool}>{tool}</span>)}
