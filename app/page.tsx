@@ -24,7 +24,7 @@ const experience = [
   },
   {
     company: "Kordis",
-    role: "ML Intern",
+    role: "AI Intern",
     period: "Jun 2025 — Sep 2025",
     summary:
       "Built retrieval, agent, and forecasting systems for real-time financial intelligence.",

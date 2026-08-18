@@ -40,7 +40,7 @@ test("server-renders the complete portfolio", async () => {
   assert.match(html, /SLiM-Eval/);
   assert.match(html, /Overlapping Prakriti Detection/);
   assert.match(html, /Pranav-Bidve-Resume\.pdf/);
-  assert.match(html, /Kordis[\s\S]*ML Intern/);
+  assert.match(html, /Kordis[\s\S]*AI Intern/);
   assert.doesNotMatch(html, /Pranav Milind Bidve/);
   assert.doesNotMatch(html, />PB<span class="accent">\.<\/span>/);
   assert.match(html, /<h1>Pranav <span>Bidve<\/span><\/h1>/);
