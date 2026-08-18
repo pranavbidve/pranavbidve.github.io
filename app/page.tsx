@@ -12,11 +12,6 @@ const experience = [
     period: "Jun 2026 — Present",
     summary:
       "Building an agent-powered e-commerce optimization platform that turns storefront evidence into measurable experiments.",
-    highlights: [
-      "Delivered 126%+ average revenue growth across 300+ stores by building a Deep Agents-powered platform using LangGraph, Playwright, and Shopify data.",
-      "Owned LangSmith evaluations and improved recommendation quality by 20% through grounding, opportunity-sizing, and multi-turn evaluators.",
-      "Reduced audit-to-experiment time by 30% through automated storefront analysis, variant generation, and approval-ready Shopify previews.",
-    ],
     stack: ["Deep Agents", "LangGraph", "LangSmith", "Next.js", "Supabase"],
   },
   {
@@ -25,11 +20,6 @@ const experience = [
     period: "Sep 2025 — Dec 2025",
     summary:
       "Developed an agentic fraud detection and investigation system operating across high-volume transaction workflows.",
-    highlights: [
-      "Reduced false negatives by 10% with an agentic RAG system combining LangGraph workflows and LLM reasoning across 10K transactions per day.",
-      "Cut analyst review time by 30% with natural-language explanations for flagged transactions.",
-      "Improved detection F1 by 18% using contextual transaction embeddings and an XGBoost feature pipeline.",
-    ],
     stack: ["LangGraph", "RAG", "OLMo", "FastAPI", "XGBoost"],
   },
   {
@@ -38,11 +28,6 @@ const experience = [
     period: "Jun 2025 — Sep 2025",
     summary:
       "Built retrieval, agent, and forecasting systems for real-time financial intelligence.",
-    highlights: [
-      "Reduced manual review effort by 30% with a hybrid dense + BM25 retrieval pipeline over Pinecone.",
-      "Cut p95 latency by 25% through an intelligent Redis query cache for a live financial analyst agent.",
-      "Improved cash-flow forecasting accuracy by 12% across XGBoost, NeuralProphet, and Transformer models.",
-    ],
     stack: ["Hybrid RAG", "Pinecone", "Redis", "Transformers", "XGBoost"],
   },
 ];
@@ -125,35 +110,34 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="eyebrow"><span /> Founding AI Engineer at Qosmic AI</div>
         <div className="hero-stage">
-          <h1>Pranav <span>Bidve</span></h1>
-          <div className="system-visual" aria-hidden="true">
-            <div className="viz-caption">
-              <span><i /> Live</span>
-              <span>Agent graph / 01</span>
+          <div className="hero-identity">
+            <h1>Pranav <span>Bidve</span></h1>
+            <p className="hero-role">AI/ML Engineer</p>
+          </div>
+          <div className="signal-visual" aria-hidden="true">
+            <div className="signal-head">
+              <span>Inference stream</span>
+              <span className="signal-live"><i /> Live</span>
             </div>
-            <div className="viz-field">
-              <span className="viz-ring viz-ring-a" />
-              <span className="viz-ring viz-ring-b" />
-              <span className="viz-ring viz-ring-c" />
-              <span className="viz-scan" />
-              <span className="viz-point viz-point-a"><i /> retrieve</span>
-              <span className="viz-point viz-point-b"><i /> evaluate</span>
-              <span className="viz-point viz-point-c"><i /> reason</span>
-              <span className="viz-core">
-                <b>LLM</b>
-                <small>orchestrator</small>
-              </span>
+            <div className="signal-field">
+              <span className="signal-beam" />
+              <span className="signal-word signal-word-a">RETRIEVE</span>
+              <span className="signal-word signal-word-b">REASON</span>
+              <span className="signal-word signal-word-c">EVALUATE</span>
+              <div className="signal-bars">
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((bar) => (
+                  <i key={bar} style={{ "--bar": bar } as React.CSSProperties} />
+                ))}
+              </div>
             </div>
-            <div className="viz-status">
-              <span>03 agents online</span>
-              <span>grounded / traced</span>
+            <div className="signal-foot">
+              <span>Context grounded</span>
+              <span>Trace 0184</span>
             </div>
           </div>
         </div>
         <div className="hero-bottom">
-          <p className="role">AI/ML ENGINEER</p>
           <p className="intro">
             I build production-grade agentic systems, RAG pipelines, and LLM
             evaluation frameworks that turn complex AI capabilities into
@@ -185,11 +169,6 @@ export default function Home() {
                   </div>
                   <p className="experience-summary">{item.summary}</p>
                 </div>
-                <ul>
-                  {item.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
                 <div className="tags">
                   {item.stack.map((tool) => <span key={tool}>{tool}</span>)}
                 </div>
@@ -311,18 +290,6 @@ export default function Home() {
               Graphics, and Business Analytics.
             </p>
           </article>
-          <article>
-            <div>
-              <p>2020 — 2024</p>
-              <h3>Vellore Institute of Technology</h3>
-              <h4>Bachelor of Technology, Computer Science and Engineering</h4>
-            </div>
-            <p>
-              Built a broad computer-science foundation and began applied
-              machine-learning research spanning classification and ensemble
-              methods.
-            </p>
-          </article>
         </div>
       </section>
 
@@ -336,21 +303,13 @@ export default function Home() {
             Download résumé ↓
           </a>
         </div>
-        <div className="resume-frame">
-          <object data="/Pranav-Bidve-Resume.pdf" type="application/pdf" aria-label="Pranav Bidve résumé">
-            <p>
-              Your browser cannot display the PDF.{" "}
-              <a href="/Pranav-Bidve-Resume.pdf" download>Download the résumé.</a>
-            </p>
-          </object>
-        </div>
       </section>
 
       <section className="contact-section" id="contact">
         <p className="section-label">06 / CONTACT</p>
         <p className="contact-kicker">Let&apos;s build what&apos;s next.</p>
-        <a className="email-link" href="mailto:pranavbidve12@gmail.com">
-          pranavbidve12@gmail.com <span aria-hidden="true">↗</span>
+        <a className="email-button" href="mailto:pranavbidve12@gmail.com">
+          Email me <span aria-hidden="true">↗</span>
         </a>
         <div className="contact-bottom">
           <div className="social-links">

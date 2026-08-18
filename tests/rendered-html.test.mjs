@@ -30,7 +30,7 @@ test("server-renders the complete portfolio", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Pranav Bidve \| AI\/ML Engineer<\/title>/i);
-  assert.match(html, /Founding AI Engineer at Qosmic AI/);
+  assert.doesNotMatch(html, /Founding AI Engineer at Qosmic AI/);
   assert.match(html, /Shopify Competitive Intelligence/);
   assert.match(html, /Agentic Commerce Assistant/);
   assert.match(html, /HexaNote/);
@@ -40,8 +40,13 @@ test("server-renders the complete portfolio", async () => {
   assert.match(html, /Kordis[\s\S]*ML Intern/);
   assert.doesNotMatch(html, /Pranav Milind Bidve/);
   assert.match(html, /<h1>Pranav <span>Bidve<\/span><\/h1>/);
+  assert.match(html, /AI\/ML Engineer/);
+  assert.doesNotMatch(html, /Vellore Institute of Technology/);
+  assert.doesNotMatch(html, /<object[^>]+Pranav-Bidve-Resume\.pdf/);
+  assert.match(html, /download=""[^>]*>Download résumé/);
+  assert.match(html, />Email me <span/);
   assert.doesNotMatch(html, /Shalini Mishra|Annapurna Jonnalagadda/);
-  assert.match(html, /pranavbidve12@gmail\.com/);
+  assert.doesNotMatch(html, />\s*pranavbidve12@gmail\.com/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
 });
 
