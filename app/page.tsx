@@ -11,7 +11,7 @@ const experience = [
     role: "Founding AI Engineer",
     period: "Jun 2026 — Present",
     summary:
-      "Building an agent-powered e-commerce optimization platform that turns storefront evidence into measurable experiments.",
+      "Building an agent-powered e-commerce optimization platform that analyzes storefront evidence to uncover revenue leakage and high-impact growth opportunities.",
     stack: ["Deep Agents", "LangGraph", "LangSmith", "Next.js", "Supabase"],
   },
   {
