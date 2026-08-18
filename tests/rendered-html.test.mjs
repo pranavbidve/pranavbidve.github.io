@@ -34,7 +34,8 @@ test("server-renders the complete portfolio", async () => {
   assert.match(html, /Shopify Competitive Intelligence/);
   assert.match(html, /PartSelect Agent/);
   assert.match(html, /HexaNote/);
-  assert.match(html, /Private repository/);
+  assert.doesNotMatch(html, /Private repository/);
+  assert.match(html, />GitHub ↗<\/a>/);
   assert.match(html, /A privacy first note taking system[\s\S]*real time device synchronization/);
   assert.match(html, /SLiM-Eval/);
   assert.match(html, /Overlapping Prakriti Detection/);

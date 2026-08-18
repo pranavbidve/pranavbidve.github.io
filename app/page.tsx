@@ -163,7 +163,7 @@ export default function Home() {
               <div className="card-top">
                 <span>{project.index}</span>
                 <a href={project.href} target="_blank" rel="noreferrer" aria-label={`View ${project.title} repository`}>
-                  Private repository ↗
+                  GitHub ↗
                 </a>
               </div>
               <h3>{project.title}</h3>
