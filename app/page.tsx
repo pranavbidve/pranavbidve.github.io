@@ -47,7 +47,7 @@ const projects = [
     description:
       "A modular multi-agent commerce system with supervisor routing, specialist agents, semantic catalog retrieval, compatibility checks, authenticated ordering, and full LangSmith observability.",
     tags: ["Multi-agent", "LangGraph", "ChromaDB", "SSE", "LangSmith"],
-    href: "https://github.com/pranavbidve/case-study-instalily",
+    href: "https://github.com/pranavbidve/case-study-partselect",
   },
   {
     index: "03",

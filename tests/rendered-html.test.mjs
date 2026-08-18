@@ -35,6 +35,7 @@ test("server-renders the complete portfolio", async () => {
   assert.match(html, /Agentic Commerce Assistant/);
   assert.match(html, /HexaNote/);
   assert.match(html, /Private repository/);
+  assert.match(html, /case-study-partselect/);
   assert.match(html, /A privacy first note taking system[\s\S]*real time device synchronization/);
   assert.match(html, /SLiM-Eval/);
   assert.match(html, /Overlapping Prakriti Detection/);
