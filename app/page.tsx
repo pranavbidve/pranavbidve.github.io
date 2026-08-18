@@ -275,7 +275,7 @@ export default function Home() {
             <p className="section-label">05 / RÉSUMÉ</p>
             <h2>The complete picture.</h2>
           </div>
-          <a className="primary-button" href="/Pranav-Bidve-Resume.pdf" download>
+          <a className="primary-button" href="/Pranav-Bidve-Resume.pdf" download="Bidve Resume.pdf">
             Download résumé ↓
           </a>
         </div>
