@@ -43,11 +43,11 @@ const projects = [
   },
   {
     index: "02",
-    title: "Agentic Commerce Assistant",
+    title: "PartSelect Agent",
     description:
       "A modular multi-agent commerce system with supervisor routing, specialist agents, semantic catalog retrieval, compatibility checks, authenticated ordering, and full LangSmith observability.",
     tags: ["Multi-agent", "LangGraph", "ChromaDB", "SSE", "LangSmith"],
-    href: "https://github.com/pranavbidve/case-study-partselect",
+    href: "https://github.com/pranavbidve/partselect-agent",
   },
   {
     index: "03",
