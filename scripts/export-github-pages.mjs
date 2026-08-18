@@ -1,11 +1,26 @@
 import { cp, mkdir, readdir, rm, writeFile } from "node:fs/promises";
 
-const previewUrl = process.env.PORTFOLIO_PREVIEW_URL ?? "http://localhost:3000";
 const productionUrl = "https://pranavbidve.github.io";
 
-const response = await fetch(previewUrl);
+const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+workerUrl.searchParams.set("export", `${Date.now()}`);
+const { default: worker } = await import(workerUrl.href);
+const response = await worker.fetch(
+  new Request("http://localhost/", {
+    headers: { accept: "text/html" },
+  }),
+  {
+    ASSETS: {
+      fetch: async () => new Response("Not found", { status: 404 }),
+    },
+  },
+  {
+    waitUntil() {},
+    passThroughOnException() {},
+  },
+);
 if (!response.ok) {
-  throw new Error(`Portfolio preview returned ${response.status}`);
+  throw new Error(`Portfolio render returned ${response.status}`);
 }
 
 const source = await response.text();
@@ -18,7 +33,7 @@ const html = source
   .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
   .replace(/<link\b(?=[^>]*\brel=["']modulepreload["'])[^>]*>/gi, "")
   .replaceAll("/app/globals.css", `/_next/static/css/${cssFile}`)
-  .replaceAll(previewUrl, productionUrl)
+  .replaceAll("http://localhost", productionUrl)
   .replace(
     "</head>",
     `<link rel="canonical" href="${productionUrl}/"/></head>`,
@@ -27,7 +42,7 @@ const html = source
 await rm("_next", { recursive: true, force: true });
 await mkdir("_next", { recursive: true });
 await cp("dist/client/_next", "_next", { recursive: true });
-await cp("public/Pranav-Milind-Bidve-Resume.pdf", "Pranav-Milind-Bidve-Resume.pdf");
+await cp("public/Pranav-Bidve-Resume.pdf", "Pranav-Bidve-Resume.pdf");
 await cp("public/og.png", "og.png");
 await cp("public/favicon.svg", "favicon.svg");
 await writeFile("index.html", html);

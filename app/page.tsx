@@ -34,7 +34,7 @@ const experience = [
   },
   {
     company: "Kordis",
-    role: "AI Intern",
+    role: "ML Intern",
     period: "Jun 2025 — Sep 2025",
     summary:
       "Built retrieval, agent, and forecasting systems for real-time financial intelligence.",
@@ -127,7 +127,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="eyebrow"><span /> Founding AI Engineer at Qosmic AI</div>
         <h1>
-          Pranav Milind
+          Pranav
           <br />
           <span>Bidve</span>
         </h1>
@@ -317,15 +317,15 @@ export default function Home() {
             <p className="section-label">05 / RÉSUMÉ</p>
             <h2>The complete picture.</h2>
           </div>
-          <a className="primary-button" href="/Pranav-Milind-Bidve-Resume.pdf" download>
+          <a className="primary-button" href="/Pranav-Bidve-Resume.pdf" download>
             Download résumé ↓
           </a>
         </div>
         <div className="resume-frame">
-          <object data="/Pranav-Milind-Bidve-Resume.pdf" type="application/pdf" aria-label="Pranav Milind Bidve résumé">
+          <object data="/Pranav-Bidve-Resume.pdf" type="application/pdf" aria-label="Pranav Bidve résumé">
             <p>
               Your browser cannot display the PDF.{" "}
-              <a href="/Pranav-Milind-Bidve-Resume.pdf" download>Download the résumé.</a>
+              <a href="/Pranav-Bidve-Resume.pdf" download>Download the résumé.</a>
             </p>
           </object>
         </div>
@@ -348,7 +348,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <p>© 2026 Pranav Milind Bidve</p>
+        <p>© 2026 Pranav Bidve</p>
         <p>AI/ML Engineer · Building reliable intelligence</p>
       </footer>
     </main>

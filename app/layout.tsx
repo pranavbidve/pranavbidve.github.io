@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pranav Milind Bidve | AI/ML Engineer",
+  title: "Pranav Bidve | AI/ML Engineer",
   description:
     "Founding AI Engineer building production-grade agentic systems, RAG pipelines, and LLM evaluation frameworks.",
   openGraph: {
-    title: "Pranav Milind Bidve | AI/ML Engineer",
+    title: "Pranav Bidve | AI/ML Engineer",
     description:
       "Production-grade agentic systems, RAG pipelines, and LLM evaluation.",
     images: ["/og.png"],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pranav Milind Bidve | AI/ML Engineer",
+    title: "Pranav Bidve | AI/ML Engineer",
     description:
       "Production-grade agentic systems, RAG pipelines, and LLM evaluation.",
     images: ["/og.png"],
