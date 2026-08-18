@@ -126,11 +126,32 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="eyebrow"><span /> Founding AI Engineer at Qosmic AI</div>
-        <h1>
-          Pranav
-          <br />
-          <span>Bidve</span>
-        </h1>
+        <div className="hero-stage">
+          <h1>Pranav <span>Bidve</span></h1>
+          <div className="system-visual" aria-hidden="true">
+            <div className="viz-caption">
+              <span><i /> Live</span>
+              <span>Agent graph / 01</span>
+            </div>
+            <div className="viz-field">
+              <span className="viz-ring viz-ring-a" />
+              <span className="viz-ring viz-ring-b" />
+              <span className="viz-ring viz-ring-c" />
+              <span className="viz-scan" />
+              <span className="viz-point viz-point-a"><i /> retrieve</span>
+              <span className="viz-point viz-point-b"><i /> evaluate</span>
+              <span className="viz-point viz-point-c"><i /> reason</span>
+              <span className="viz-core">
+                <b>LLM</b>
+                <small>orchestrator</small>
+              </span>
+            </div>
+            <div className="viz-status">
+              <span>03 agents online</span>
+              <span>grounded / traced</span>
+            </div>
+          </div>
+        </div>
         <div className="hero-bottom">
           <p className="role">AI/ML ENGINEER</p>
           <p className="intro">
@@ -141,11 +162,6 @@ export default function Home() {
           <a className="scroll-cue" href="#experience">
             Explore my work <span aria-hidden="true">↓</span>
           </a>
-        </div>
-        <div className="hero-orbit" aria-hidden="true">
-          <span className="orbit orbit-one" />
-          <span className="orbit orbit-two" />
-          <span className="orbit-core">AI</span>
         </div>
       </section>
 
@@ -242,7 +258,6 @@ export default function Home() {
                 clustering and Multinomial Naïve Bayes to identify overlapping
                 Prakriti types.
               </p>
-              <p className="authors">Pranav Bidve · Shalini Mishra · Annapurna Jonnalagadda</p>
               <div className="publication-actions">
                 <a href="https://link.springer.com/chapter/10.1007/978-3-031-64850-2_45" target="_blank" rel="noreferrer">Springer ↗</a>
               </div>

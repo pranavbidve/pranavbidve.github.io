@@ -39,6 +39,8 @@ test("server-renders the complete portfolio", async () => {
   assert.match(html, /Pranav-Bidve-Resume\.pdf/);
   assert.match(html, /Kordis[\s\S]*ML Intern/);
   assert.doesNotMatch(html, /Pranav Milind Bidve/);
+  assert.match(html, /<h1>Pranav <span>Bidve<\/span><\/h1>/);
+  assert.doesNotMatch(html, /Shalini Mishra|Annapurna Jonnalagadda/);
   assert.match(html, /pranavbidve12@gmail\.com/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
 });
