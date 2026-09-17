@@ -39,7 +39,7 @@ test("server-renders the complete portfolio", async () => {
   assert.match(html, /SLiM-Eval/);
   assert.match(html, /Overlapping Prakriti Detection/);
   assert.match(html, /mailto:pranavbidve12@gmail\.com/);
-  assert.match(html, /src="\/images\/pranav-portrait\.jpg"/);
+  assert.match(html, /src="\/images\/pranav-portrait-canoe\.png"/);
   for (const project of ["shopify", "partselect", "hexanote"]) {
     assert.ok(html.includes(`href="#project-${project}"`));
     assert.ok(html.includes(`id="dialog-${project}"`));
@@ -57,7 +57,7 @@ test("includes the portfolio's downloadable assets", async () => {
     access(new URL("../public/images/shopify-report.png", import.meta.url)),
     access(new URL("../public/images/shopify-analysis.png", import.meta.url)),
     access(new URL("../public/images/hexanote-icon.svg", import.meta.url)),
-    access(new URL("../public/images/pranav-portrait.jpg", import.meta.url)),
+    access(new URL("../public/images/pranav-portrait-canoe.png", import.meta.url)),
     access(new URL("../public/portfolio.js", import.meta.url)),
   ]);
 });

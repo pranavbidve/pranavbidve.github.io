@@ -56,7 +56,7 @@ export default function Home() {
     <nav id="mobile-nav" className="mobile-nav" aria-label="Mobile navigation" hidden><a href="#work">Selected work ↗</a><a href="#experience">Experience ↗</a><a href="#research">Research ↗</a><a href="#about">About ↗</a><a href="mailto:pranavbidve12@gmail.com">Let’s talk ↗</a></nav>
     <section className="hero" id="top">
       <div className="hero-composition">
-        <div className="hero-copy"><h1><span className="headline-line">Pranav</span><span className="headline-line lime-word">Bidve</span></h1><p className="hero-title">Founding AI Intern <span>at Qosmic</span></p><p className="intro">I build AI tools for e-commerce and finance, from store analysis and product search to transaction review.</p><a className="primary-button" href="#work">View my projects <Arrow /></a></div>
+        <div className="hero-copy"><h1><span className="headline-line">Pranav <span className="lime-word">Bidve</span></span></h1><p className="hero-title">Founding Engineer <span>at Qosmic</span></p><p className="intro">I build AI tools for e-commerce and finance, from store analysis and product search to transaction review.</p><a className="primary-button" href="#work">View my projects <Arrow /></a></div>
         <div className="portrait-stack" data-tilt><div className="portrait-card"><span className="photo-index">PORTRAIT</span><img className="portrait-photo" src="/images/pranav-portrait-canoe.png" alt="Pranav smiling while canoeing on a lake" width="1299" height="2294" fetchPriority="high" /><div className="portrait-caption"><span>Pranav Bidve</span><Arrow /></div></div></div>
       </div>
     </section>
