@@ -26,3 +26,10 @@
 .portrait-photo{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center;margin:18px 0 20px;border-radius:2px;}
 
 .about-content{max-width:1360px}.about-content .about-heading{max-width:760px}.about-content .about-heading>p:not(.section-label){max-width:720px}.about-content .text-link{margin-top:8px}
+
+/* Emphasize project and work experience titles without changing their size. */
+.project-caption h3,
+.experience-identity h3,
+.experience-identity > p,
+.dialog-content h2,
+.next-project strong { font-weight: 600; }
