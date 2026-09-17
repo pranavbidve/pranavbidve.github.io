@@ -13,13 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pranavbidve.github.io"),
   title: "Pranav Bidve | AI/ML Engineer",
   description:
-    "Founding AI Engineer building production-grade agentic systems, RAG pipelines, and LLM evaluation frameworks.",
+    "Pranav Bidve, Founding AI Intern at Qosmic. Building AI tools for e-commerce and finance.",
   openGraph: {
     title: "Pranav Bidve | AI/ML Engineer",
     description:
-      "Production-grade agentic systems, RAG pipelines, and LLM evaluation.",
+      "AI projects, software experience, and research by Pranav Bidve.",
     images: ["/og.png"],
     type: "website",
   },
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pranav Bidve | AI/ML Engineer",
     description:
-      "Production-grade agentic systems, RAG pipelines, and LLM evaluation.",
+      "AI projects, software experience, and research by Pranav Bidve.",
     images: ["/og.png"],
   },
   icons: {
@@ -47,6 +48,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <script src="/portfolio.js" defer />
       </body>
     </html>
   );

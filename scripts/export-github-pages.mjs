@@ -45,6 +45,9 @@ await cp("dist/client/_next", "_next", { recursive: true });
 await cp("public/Pranav-Bidve-Resume.pdf", "Pranav-Bidve-Resume.pdf");
 await cp("public/og.png", "og.png");
 await cp("public/favicon.svg", "favicon.svg");
-await writeFile("index.html", html);
+await cp("public/images", "images", { recursive: true });
+await cp("public/fonts", "fonts", { recursive: true });
+await cp("public/portfolio.js", "portfolio.js");
+await writeFile("index.html", html.replace("</body>", '<script src="/portfolio.js" defer></script></body>'));
 
 console.log("GitHub Pages snapshot created at index.html");

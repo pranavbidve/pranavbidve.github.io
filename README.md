@@ -1,7 +1,7 @@
-# Pranav Bidve — Portfolio
+# Pranav Bidve - Portfolio
 
-Dark technical portfolio for Pranav Bidve, AI/ML Engineer and Founding
-AI Engineer at Qosmic AI.
+Personal portfolio for Pranav Bidve, AI/ML Engineer and Founding
+AI Intern at Qosmic.
 
 The repository contains both the editable application source and a static
 GitHub Pages snapshot at the repository root.

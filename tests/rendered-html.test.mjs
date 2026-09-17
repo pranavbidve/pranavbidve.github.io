@@ -30,29 +30,22 @@ test("server-renders the complete portfolio", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Pranav Bidve \| AI\/ML Engineer<\/title>/i);
-  assert.doesNotMatch(html, /Founding AI Engineer at Qosmic AI/);
-  assert.match(html, /Shopify Competitive Intelligence/);
-  assert.match(html, /PartSelect Agent/);
-  assert.match(html, /HexaNote/);
-  assert.doesNotMatch(html, /Private repository/);
-  assert.match(html, />GitHub ↗<\/a>/);
-  assert.match(html, /A privacy first note taking system[\s\S]*real time device synchronization/);
+  assert.match(html, /Qosmic<\/h3>/);
+  assert.match(html, /Founding AI Intern/);
+  assert.doesNotMatch(html, /Qosmic AI|Founding AI Engineer/);
+  assert.match(html, /Columbia University graduate/);
+  assert.match(html, /Pranav-Bidve-Resume\.pdf/);
+  assert.match(html, /download="Bidve Resume\.pdf"/);
   assert.match(html, /SLiM-Eval/);
   assert.match(html, /Overlapping Prakriti Detection/);
-  assert.match(html, /Pranav-Bidve-Resume\.pdf/);
-  assert.match(html, /Kordis[\s\S]*AI Intern/);
-  assert.doesNotMatch(html, /Pranav Milind Bidve/);
-  assert.doesNotMatch(html, />PB<span class="accent">\.<\/span>/);
-  assert.match(html, /<h1>Pranav <span>Bidve<\/span><\/h1>/);
-  assert.match(html, /AI\/ML Engineer/);
-  assert.doesNotMatch(html, /Inference stream|signal-visual|signal-bars/);
-  assert.match(html, /Founding AI Engineer<\/p><p class="experience-summary">Building an agent-powered/);
-  assert.doesNotMatch(html, /Vellore Institute of Technology/);
-  assert.doesNotMatch(html, /<object[^>]+Pranav-Bidve-Resume\.pdf/);
-  assert.match(html, /download="Bidve Resume\.pdf"[^>]*>Download résumé/);
-  assert.match(html, />Email me <span/);
-  assert.doesNotMatch(html, /Shalini Mishra|Annapurna Jonnalagadda/);
-  assert.doesNotMatch(html, />\s*pranavbidve12@gmail\.com/);
+  assert.match(html, /mailto:pranavbidve12@gmail\.com/);
+  assert.match(html, /src="\/images\/pranav-portrait\.jpg"/);
+  for (const project of ["shopify", "partselect", "hexanote"]) {
+    assert.ok(html.includes(`href="#project-${project}"`));
+    assert.ok(html.includes(`id="dialog-${project}"`));
+    assert.ok(html.includes(`aria-labelledby="title-${project}"`));
+  }
+  assert.match(html, /src="\/portfolio\.js"/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
 });
 
@@ -60,5 +53,11 @@ test("includes the portfolio's downloadable assets", async () => {
   await Promise.all([
     access(new URL("../public/Pranav-Bidve-Resume.pdf", import.meta.url)),
     access(new URL("../public/og.png", import.meta.url)),
+    access(new URL("../public/fonts/syne-800.ttf", import.meta.url)),
+    access(new URL("../public/images/shopify-report.png", import.meta.url)),
+    access(new URL("../public/images/shopify-analysis.png", import.meta.url)),
+    access(new URL("../public/images/hexanote-icon.svg", import.meta.url)),
+    access(new URL("../public/images/pranav-portrait.jpg", import.meta.url)),
+    access(new URL("../public/portfolio.js", import.meta.url)),
   ]);
 });
