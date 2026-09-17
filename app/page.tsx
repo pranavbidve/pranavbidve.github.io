@@ -57,7 +57,7 @@ export default function Home() {
     <section className="hero" id="top">
       <div className="hero-composition">
         <div className="hero-copy"><h1><span className="headline-line">Pranav</span><span className="headline-line lime-word">Bidve</span></h1><p className="hero-title">Founding AI Intern <span>at Qosmic</span></p><p className="intro">I build AI tools for e-commerce and finance, from store analysis and product search to transaction review.</p><a className="primary-button" href="#work">View my projects <Arrow /></a></div>
-        <div className="portrait-stack" data-tilt><div className="portrait-card"><span className="photo-index">PORTRAIT</span><img className="portrait-photo" src="/images/pranav-portrait.jpg" alt="Pranav overlooking the New York City skyline" width="640" height="640" fetchPriority="high" /><div className="portrait-caption"><span>Pranav Bidve</span><Arrow /></div></div></div>
+        <div className="portrait-stack" data-tilt><div className="portrait-card"><span className="photo-index">PORTRAIT</span><img className="portrait-photo" src="/images/pranav-portrait-canoe.png" alt="Pranav smiling while canoeing on a lake" width="1299" height="2294" fetchPriority="high" /><div className="portrait-caption"><span>Pranav Bidve</span><Arrow /></div></div></div>
       </div>
     </section>
     <section className="section work-section" id="work">
